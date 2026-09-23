@@ -1,10 +1,10 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 
 /* ── Animation Variants ───────────────────────────────── */
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
@@ -12,12 +12,12 @@ const fadeUp = {
     transition: {
       delay: i * 0.1,
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   }),
 }
 
-const scaleIn = {
+const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.85 },
   visible: {
     opacity: 1,
@@ -25,12 +25,12 @@ const scaleIn = {
     transition: {
       delay: 0.4,
       duration: 0.7,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 }
 
-const floatBubble = {
+const floatBubble: Variants = {
   hidden: { opacity: 0, x: 40, rotate: 5 },
   visible: {
     opacity: 1,
@@ -39,14 +39,14 @@ const floatBubble = {
     transition: {
       delay: 0.8,
       duration: 0.7,
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 150,
       damping: 15,
     },
   },
 }
 
-const floatGoodMemes = {
+const floatGoodMemes: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
@@ -54,7 +54,7 @@ const floatGoodMemes = {
     transition: {
       delay: 1.0,
       duration: 0.7,
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 120,
       damping: 18,
     },

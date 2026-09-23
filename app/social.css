@@ -1,0 +1,275 @@
+/* ═══════════════════════════════════════════════════════
+   SOCIAL SECTION STYLES
+   ═══════════════════════════════════════════════════════ */
+
+.social-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #dcf2fd 0%, #eaf5fc 35%, #f4faff 70%, #ffffff 100%);
+  padding: 40px 20px 70px;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .social-section {
+    padding: 50px 36px 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-section {
+    padding: 60px 48px 110px;
+  }
+}
+
+/* ── Background Decorations ───────────────────────────── */
+.social-bg-decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.social-paw {
+  position: absolute;
+  opacity: 0.25;
+}
+
+.paw-s1 {
+  top: 15%;
+  left: 6%;
+  transform: rotate(-15deg);
+}
+
+.paw-s2 {
+  bottom: 20%;
+  right: 8%;
+  transform: rotate(20deg);
+}
+
+.paw-s3 {
+  top: 25%;
+  right: 18%;
+  transform: rotate(-10deg);
+}
+
+/* ── Container ────────────────────────────────────────── */
+.social-container {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .social-container {
+    gap: 24px;
+  }
+}
+
+/* ── Heading with DrDoge Logo ─────────────────────────── */
+.social-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.social-heading {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 14px;
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 2.2rem;
+  font-weight: 950;
+  color: #0c2b64;
+  line-height: 1.15;
+}
+
+.social-heading-text {
+  color: #0c2b64;
+}
+
+.social-logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+}
+
+.social-drdoge-img {
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(12, 43, 100, 0.15));
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.social-heading:hover .social-drdoge-img {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+@media (min-width: 480px) {
+  .social-heading {
+    font-size: 2.6rem;
+  }
+  .social-drdoge-img {
+    height: 56px;
+  }
+}
+
+@media (min-width: 768px) {
+  .social-heading {
+    font-size: 3.4rem;
+    gap: 12px 16px;
+  }
+  .social-drdoge-img {
+    height: 72px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-heading {
+    font-size: 3.8rem;
+  }
+  .social-drdoge-img {
+    height: 80px;
+  }
+}
+
+/* ── Subtitle ─────────────────────────────────────────── */
+.social-subtitle-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-poppins), sans-serif;
+  color: #2b4f87;
+  max-width: 600px;
+}
+
+.social-sub-1 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.social-sub-2 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #4369a4;
+  margin: 0;
+}
+
+.social-ticker {
+  color: #0b4db0;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .social-sub-1 {
+    font-size: 1.2rem;
+  }
+  .social-sub-2 {
+    font-size: 1.05rem;
+  }
+}
+
+/* ── Social Buttons Row (Only Telegram & X) ───────────── */
+.social-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .social-buttons-row {
+    gap: 20px;
+    margin-top: 16px;
+  }
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1.5px solid rgba(27, 82, 168, 0.18);
+  border-radius: 9999px;
+  padding: 8px 22px 8px 10px;
+  text-decoration: none;
+  font-family: var(--font-nunito), sans-serif;
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: #0c2b64;
+  box-shadow: 0 4px 16px rgba(18, 64, 140, 0.08);
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.social-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(18, 64, 140, 0.15);
+  border-color: rgba(27, 82, 168, 0.4);
+}
+
+.social-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tg-icon-bg {
+  background: #0088cc;
+  box-shadow: 0 2px 8px rgba(0, 136, 204, 0.35);
+}
+
+.x-icon-bg {
+  background: #0f1419;
+  box-shadow: 0 2px 8px rgba(15, 20, 25, 0.35);
+}
+
+.social-icon-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn-label {
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  .social-btn {
+    padding: 10px 26px 10px 12px;
+    font-size: 1.15rem;
+    gap: 12px;
+  }
+
+  .social-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-icon-svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn-label {
+    font-size: 1.15rem;
+  }
+}
