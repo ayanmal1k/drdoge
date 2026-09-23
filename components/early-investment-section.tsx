@@ -174,7 +174,7 @@ export default function EarlyInvestmentSection() {
                 </svg>
 
                 <a
-                  href="https://t.me/"
+                  href="https://t.me/Dr_doge69"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="invest-btn"

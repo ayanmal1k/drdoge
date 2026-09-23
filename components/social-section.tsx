@@ -86,7 +86,7 @@ export default function SocialSection() {
         >
           {/* Telegram Button */}
           <a
-            href="https://t.me/"
+            href="https://t.me/drdoge69"
             target="_blank"
             rel="noopener noreferrer"
             className="social-btn social-btn-tg"
@@ -101,7 +101,7 @@ export default function SocialSection() {
 
           {/* X (Twitter) Button */}
           <a
-            href="https://x.com/"
+            href="https://x.com/dr_doge_"
             target="_blank"
             rel="noopener noreferrer"
             className="social-btn social-btn-x"
