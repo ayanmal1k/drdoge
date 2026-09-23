@@ -1,0 +1,500 @@
+/* ═══════════════════════════════════════════════════════
+   HERO SECTION STYLES
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Section Container ────────────────────────────────── */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    align-items: stretch;
+  }
+}
+
+/* ── Background ───────────────────────────────────────── */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg-img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 60, 160, 0.55) 0%,
+    rgba(25, 80, 200, 0.35) 40%,
+    rgba(30, 100, 220, 0.2) 100%
+  );
+}
+
+/* ── Content Container — FULL WIDTH ───────────────────── */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 100px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0;
+    gap: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
+/* ── Left: Text Content ──────────────────────────────── */
+.hero-left {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 24px;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .hero-left {
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 0 80px 48px;
+    width: 48%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-left {
+    padding-left: 64px;
+    width: 44%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-left {
+    padding-left: 96px;
+    width: 40%;
+  }
+}
+
+/* ── Tagline ──────────────────────────────────────────── */
+.hero-tagline {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .hero-tagline {
+    font-size: 1.32rem;
+    margin-bottom: 14px;
+  }
+}
+
+/* ── Heading ──────────────────────────────────────────── */
+.hero-heading {
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.hero-heading-accent {
+  color: #FFD233;
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 4.6rem;
+    margin-bottom: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-heading {
+    font-size: 5rem;
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-heading {
+    font-size: 5.8rem;
+  }
+}
+
+/* ── Description ──────────────────────────────────────── */
+.hero-description {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 14px;
+  max-width: 520px;
+}
+
+@media (min-width: 768px) {
+  .hero-description {
+    font-size: 1.26rem;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-description {
+    font-size: 1.4rem;
+  }
+}
+
+/* ── Ticker Line ──────────────────────────────────────── */
+.hero-ticker {
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 22px;
+  letter-spacing: 0.01em;
+}
+
+.hero-ticker-sep {
+  margin: 0 6px;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .hero-ticker {
+    font-size: 1.15rem;
+    margin-bottom: 26px;
+  }
+}
+
+/* ── Buttons ──────────────────────────────────────────── */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-buttons {
+    justify-content: flex-start;
+    margin-bottom: 32px;
+  }
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a3ca0;
+  background: #FFD233;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 16px rgba(255, 210, 51, 0.3);
+}
+
+.hero-btn-primary:hover {
+  background: #ffe066;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 210, 51, 0.4);
+}
+
+.hero-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.hero-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: transparent;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ── Social Links ─────────────────────────────────────── */
+.hero-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-socials {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+.hero-social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.25s ease;
+}
+
+.hero-social-link:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.hero-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.25s ease;
+}
+
+.hero-social-link:hover .hero-social-icon {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-social-label {
+  font-family: var(--font-nunito), sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════════════════
+   RIGHT SIDE: Character + Decorative Images
+   Character is 85% of section height, stuck to bottom.
+   Good-memes & bubble sit to the RIGHT of the character.
+   ══════════════════════════════════════════════════════ */
+.hero-right {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 340px;
+  align-self: flex-end;
+}
+
+@media (min-width: 768px) {
+  .hero-right {
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-right {
+    max-width: none;
+    flex: 1;
+    justify-content: center;
+    align-self: flex-end;
+    margin-left: -80px;
+    padding-right: 0;
+  }
+}
+
+/* ── Character Image ──────────────────────────────────── */
+.hero-character {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-character-img {
+  width: auto;
+  height: 60vh;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 40px rgba(0, 0, 0, 0.3));
+}
+
+@media (min-width: 768px) {
+  .hero-character-img {
+    height: 72vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-character-img {
+    height: 93vh;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-character-img {
+    height: 96vh;
+  }
+}
+
+/* ── Good Memes Text Image — to the RIGHT of character ─ */
+.hero-good-memes {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-good-memes {
+    display: block;
+    position: absolute;
+    /* position to the right of the character */
+    right: 0;
+    top: 10%;
+    z-index: 3;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-good-memes {
+    right: 20px;
+    top: 5%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-good-memes {
+    right: 40px;
+  }
+}
+
+.hero-good-memes-img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+@media (min-width: 1280px) {
+  .hero-good-memes-img {
+    width: 190px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-good-memes-img {
+    width: 220px;
+  }
+}
+
+/* ── To The Moon Bubble — to the RIGHT of character ───── */
+.hero-bubble {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-bubble {
+    display: block;
+    position: absolute;
+    /* sits below the good-memes text, to the right of char */
+    right: -10px;
+    top: 65%;
+    z-index: 4;
+    animation: floatY 3.5s ease-in-out infinite;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-bubble {
+    right: 10px;
+    top: 60%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-bubble {
+    right: 30px;
+  }
+}
+
+.hero-bubble-img {
+  width: 155px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.12));
+}
+
+@media (min-width: 1280px) {
+  .hero-bubble-img {
+    width: 180px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-bubble-img {
+    width: 200px;
+  }
+}
+
+/* ── Ambient Float Animation ──────────────────────────── */
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ── Reduced Motion ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bubble {
+    animation: none;
+  }
+}
