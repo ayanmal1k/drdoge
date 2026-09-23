@@ -5,9 +5,9 @@
 .navbar-header {
   position: relative;
   width: 100%;
-  background: #0A6CD9;
+  background: #0B4AAE;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 20px rgba(10, 108, 217, 0.25);
+  box-shadow: 0 4px 20px rgba(11, 74, 174, 0.25);
   padding: 16px 20px;
   z-index: 50;
 }
@@ -198,7 +198,7 @@
   left: 12px;
   right: 12px;
   margin-top: 8px;
-  background: rgba(10, 108, 217, 0.97);
+  background: rgba(11, 74, 174, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.25);
